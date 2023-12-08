@@ -2,9 +2,11 @@
 
 import type { News, Reverse } from '../services/interfaces/newsletter.d.ts'
 
-export async function getNewsletters() {
+export async function getNewsletters(page) {
   //const response = await fetch("http://localhost:3000/data")
-  const response = await fetch("https://my-json-server.typicode.com/CaptWhite/aster-newsletter/data")
+  //const response = await fetch("https://my-json-server.typicode.com/CaptWhite/aster-newsletter/data")
+  const response = await fetch(`https://my-json-server.typicode.com/AsterBCN/newsletter-repo/data/${page}`)
+ 
   const data = await response.json() 
   if (!data.widthPhoto) data['widthPhoto'] = 70
   return data

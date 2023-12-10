@@ -1,6 +1,5 @@
 ---
 import type { News, Reverse } from '../services/interfaces/newsletter'
-import { getUrlImageDrive } from '../services/getImages.ts'
 
 export interface Props {
   news: News
@@ -11,10 +10,9 @@ export interface Props {
 const {news, reverse, widthPhoto} = Astro.props
 let {order,category, url, image, title, summary} = news
 const isOneDrive = url.includes('live.com')
-const isDrive = url.includes('drive.google.com/file')
+const isDrive = url.includes('googleusercontent.com')
 
 if (isOneDrive) url = url.replace('?', '%3F' )
-if (isDrive) url = await getUrlImageDrive(url)
 ---
 
 <!-- ARTICLE PHOTO -->

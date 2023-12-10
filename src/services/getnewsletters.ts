@@ -2,6 +2,26 @@
 
 import type { News, Reverse } from '../services/interfaces/newsletter.d.ts'
 
+export async function getNewslettersAll() {
+  //const response = await fetch("http://localhost:3000/data")
+  //const response = await fetch("https://my-json-server.typicode.com/CaptWhite/aster-newsletter/data")
+  const response = await fetch(`https://my-json-server.typicode.com/AsterBCN/newsletter-repo/data`)
+ 
+  const data = await response.json() 
+  return data
+}
+export async function getNewslettersLast() {
+  //const response = await fetch("http://localhost:3000/data")
+  //const response = await fetch("https://my-json-server.typicode.com/CaptWhite/aster-newsletter/data")
+  const response = await fetch(`https://my-json-server.typicode.com/AsterBCN/newsletter-repo/data`)
+  const data = await response.json()
+  const dataSelected = data.reduce((previous, current) => {
+    return current.id > previous.id ? current : previous;
+  });
+  if (!dataSelected.widthPhoto) data['widthPhoto'] = 70
+  return dataSelected
+}
+
 export async function getNewsletters(page) {
   //const response = await fetch("http://localhost:3000/data")
   //const response = await fetch("https://my-json-server.typicode.com/CaptWhite/aster-newsletter/data")
@@ -11,6 +31,7 @@ export async function getNewsletters(page) {
   if (!data.widthPhoto) data['widthPhoto'] = 70
   return data
 }
+
 
 
 export function newsSortedGrouped (news) {

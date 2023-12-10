@@ -3,15 +3,15 @@ import Layout from '../layouts/Layout.astro';
 import Head from "../components/Head.astro";
 import Main1 from '../components/Main1.astro';
 import Footer from '../components/Footer.astro';
+import { getNewsletters, getNewslettersLast } from '../services/getnewsletters'
 import Styles from '../components/Styles.astro';
-import { getNewsletters } from '../services/getnewsletters'
 
-const {id, date, widthPhoto, news } = await getNewsletters(1)
+const {sequence, date, widthPhoto, news } = await getNewslettersLast()
 ---
 
 <Layout>
-  <Head seq={id} date={date}/>
-  <Main1 news={news} widthPhotoDefault={widthPhoto}/>
-  <Footer/>
-  <Styles />
+    <Head seq={sequence} date={date}/>
+    <Main1 news={news} widthPhotoDefault={widthPhoto}/>
+    <Footer/>
+    <Styles/>
 </Layout>

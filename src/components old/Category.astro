@@ -1,50 +1,13 @@
 ---
-//import { news } from '../data/news'
-//const response = await fetch("http://localhost:3000/news")
 
-import Main2 from './Main2.astro';
-
-//const news = await response.json() 
-type News = {
-  order: number;
-  category: string;
-  url: string;
-  image: string;
-  title: string;
-  summary: string
-}
-
-type NewsGroupedBy = {
-  category: string;
-  news: News;
-}
 export interface Props {
-  news: News[]
+  category: string
 }
 
-const { news } = Astro.props
+const { category } = Astro.props
 
-const newsSorted = news.slice().sort(function(a, b) {
-  return a.order - b.order;
-})
-
-const newsGruopedBy = newsSorted.reduce(function (acc, obj) {
-    const keyValue = obj['category'];
-    if (!acc[keyValue]) {
-      acc[keyValue] = [];
-    }
-    acc[keyValue].push(obj);
-    return acc;
-  }, {});
-  
 ---
- 
-  <!-- ARTICLE -->
-  { 
-    Object.keys(newsGruopedBy).map((category) => {
-      return (
-
-      
+ <!-- CATEGORY -->     
       <table class="row row-2" align="center" width="100%">
             <tbody>
               <tr>
@@ -70,10 +33,5 @@ const newsGruopedBy = newsSorted.reduce(function (acc, obj) {
               </tr>
             </tbody>
           </table>
-          <Main2 news={newsGruopedBy[category]} />
-      )
-    })
-  
-  }
-  <!-- End of ARTICLE -->
+  <!-- End of CATEGORY ! -->
  

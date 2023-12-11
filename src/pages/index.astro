@@ -6,11 +6,11 @@ import Footer from '../components/Footer.astro';
 import { getNewsletters, getNewslettersLast } from '../services/getnewsletters'
 import Styles from '../components/Styles.astro';
 
-const {sequence, date, widthPhoto, news } = await getNewslettersLast()
+const {id, sequence, date, widthPhoto, news } = await getNewslettersLast()
 ---
 
 <Layout>
-    <Head seq={sequence} date={date}/>
+    <Head id={id} date={date}/>
     <Main1 news={news} widthPhotoDefault={widthPhoto}/>
     <Footer/>
     <Styles/>

@@ -1,10 +1,10 @@
 ---
 export interface Props {
-  seq: string
+  id: string
   date: string
 }
 
-const { seq, date } = Astro.props
+const { id, date } = Astro.props
 ---
 
 					<!-- HEADER -->
@@ -32,7 +32,7 @@ const { seq, date } = Astro.props
                             <tr>
                               <td class="pad">
                                 <div class="hd-div-paragraph">
-                                  <h2 class="hd-p-paragraph">AsterPublicació {seq}</h2>
+                                  <h2 class="hd-p-paragraph">AsterPublicació {id}</h2>
                                   <h3 class="hd-p-paragraph">{date}</h3>
                                 </div>
                               </td>

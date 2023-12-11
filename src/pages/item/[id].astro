@@ -23,7 +23,7 @@ export const getStaticPaths = async () => {
 ---
 
 <Layout>
-  <Head seq={newsletter.id} date={newsletter.date}/>
+  <Head id={newsletter.id} date={newsletter.date}/>
   <Main1 news={newsletter.news} widthPhotoDefault={newsletter.widthPhoto}/>
   <Footer/>
   <Styles />

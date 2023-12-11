@@ -18,6 +18,7 @@ export async function getNewslettersLast() {
   const dataSelected = data.reduce((previous, current) => {
     return current.id > previous.id ? current : previous;
   });
+
   if (!dataSelected.widthPhoto) data['widthPhoto'] = 70
   return dataSelected
 }

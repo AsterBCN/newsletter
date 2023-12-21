@@ -10,12 +10,8 @@ export interface Props {
   news: News[]
   widthPhotoDefault: number
 }
-
 const { news, widthPhotoDefault} = Astro.props
-
-
 const newsGruopedBy = newsSortedGrouped(news)
-
 ---
  <!-- CATEGORY -->
   { 

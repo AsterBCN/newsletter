@@ -1,20 +1,14 @@
+import type { Newsletter } from '../services/interfaces/newsletter.d.ts'
 
-
-import type { News, Reverse } from '../services/interfaces/newsletter.d.ts'
+import {loadSpreadsheet} from '../services/sheets.js'
+import type { Reverse } from '../services/interfaces/newsletter.d.ts'
 
 export async function getNewslettersAll() {
-  //const response = await fetch("http://localhost:3000/data")
-  //const response = await fetch("https://my-json-server.typicode.com/CaptWhite/aster-newsletter/data")
-  const response = await fetch(`https://my-json-server.typicode.com/AsterBCN/newsletter-repo/data`)
- 
-  const data = await response.json() 
+  const {data} = await loadSpreadsheet()
   return data
 }
 export async function getNewslettersLast() {
-  //const response = await fetch("http://localhost:3000/data")
-  //const response = await fetch("https://my-json-server.typicode.com/CaptWhite/aster-newsletter/data")
-  const response = await fetch(`https://my-json-server.typicode.com/AsterBCN/newsletter-repo/data`)
-  const data = await response.json()
+  const {data} = await loadSpreadsheet()
   const dataSelected = data.reduce((previous, current) => {
     return current.id > previous.id ? current : previous;
   });
@@ -24,13 +18,10 @@ export async function getNewslettersLast() {
 }
 
 export async function getNewsletters(page) {
-  //const response = await fetch("http://localhost:3000/data")
-  //const response = await fetch("https://my-json-server.typicode.com/CaptWhite/aster-newsletter/data")
-  const response = await fetch(`https://my-json-server.typicode.com/AsterBCN/newsletter-repo/data/${page}`)
- 
-  const data = await response.json() 
-  if (!data.widthPhoto) data['widthPhoto'] = 70
-  return data
+  const {data} = await loadSpreadsheet()
+  const dataSelected = data.filter(item => item.id==page)  
+  if (!dataSelected[0].widthPhoto[0]) dataSelected[0]['widthPhoto'] = 70
+  return dataSelected[0]
 }
 
 

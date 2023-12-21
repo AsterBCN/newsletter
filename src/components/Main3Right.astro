@@ -8,9 +8,7 @@ export interface Props {
 }
 
 const {news, reverse, widthPhoto} = Astro.props
-
 const {order,category, url, image, title, summary} = news
-
 ---
 <!-- ARTICLE TEXT -->
 <td class={reverse.last} width={ reverse.rever=='' ?      (widthPhoto)+'%' :  100-widthPhoto+'%'  } style={(widthPhoto==100 )   ? "display:none" : ""}>

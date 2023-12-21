@@ -12,10 +12,8 @@ const {news, widthPhotoDefault } = Astro.props
 if (!news.widthPhoto && news.widthPhoto>0) news['widthPhoto'] = widthPhotoDefault
 
 const reverse = calculeClasesReverse(news) 
-
 ---
 <!-- ARTICLE -->
-{
 <table class="row row-3" align="center" width="100%">
   <tbody>
     <tr>

@@ -6,11 +6,8 @@ type Props = {
 	title: string
 	img: string
 }
-
-
 const props = Astro.props
 const { id, date, title, img } = props
-
 ---
 
 <CardWrapper 	href={`/newsletter/item/${id}`} >
@@ -27,7 +24,6 @@ const { id, date, title, img } = props
 			alt={`Image`}
 		/>
 	</picture>
-
 	<header style='flex-grow: 1;height:fit-content; display:flex; flex-direction:column; gap:0.5rem; align-items: center'>
 		<h4 style="margin-block-start: 0px; margin-block-end: 0px;">
 			Newsletter #{id}
@@ -36,13 +32,10 @@ const { id, date, title, img } = props
 	}">
 	  {date}
 		</h3>
-
 		<p 
 			style="font-weight: 300;  -webkit-line-clamp: 3;margin-block-start: 0px; margin-block-end: 0px">
 			{`Titol: ${title}`}
 		</p>
 	</header>
 </div>
-
-
 </CardWrapper>

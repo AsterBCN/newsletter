@@ -5,19 +5,19 @@ export interface Props {
 const { category } = Astro.props
 ---
  <!-- CATEGORY -->     
-      <table class="row row-2" align="center" width="100%">
+      <table align="center" width="100%">
             <tbody>
               <tr>
                 <td>
-                  <table class="row-content stack mn-row-content-headline" align="center" width="800">
+                  <table class="row-content mn-row-content-headline" align="center" width="800">
                     <tbody>
                       <tr>
-                        <td class="column column-1 mn-column1-headline">
-                          <table class="heading_block block-1" width="100%" cellpadding="10"  >
+                        <td>
+                          <table width="100%" >
                             <tr>
-                              <td class="pad">
+                              <td>
                                 <h1 class="mn-main-headline">
-                                  <span class="tinyMce-placeholder">{category}</span>
+                                  <span>{category}</span>
                                 </h1>
                               </td>
                             </tr>

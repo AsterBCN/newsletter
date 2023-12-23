@@ -1,7 +1,6 @@
 ---
 import type { Newsletter } from '../services/interfaces/newsletter'
 import { getNewslettersAll } from '../services/getnewsletters'
-import Divider from './Divider.astro';
 import Card from './Card.astro';
 const catalog: Newsletter[] = await getNewslettersAll()
 ---

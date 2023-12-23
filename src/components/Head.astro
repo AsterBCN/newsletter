@@ -1,35 +1,35 @@
 ---
+import Text from './Text.astro';
 export interface Props {
   id: string
   date: string
 }
-
 const { id, date } = Astro.props
 ---
 					<!-- HEADER -->
-          <table class="row row-1 hd-row1" align="center" width="100%">
+          <table align="center" width="100%">
             <tbody>
+              <!-- <Text /> -->
               <tr>
                 <td>
-                  <table class="row-content stack hd-row-content" align="center" width="800">
+                  <table class="hd-row-content" align="center" width="800">
                     <tbody>
                       <tr>
-                        <td class="column column-1 hd-column1 " width="100%">
-                          <table class="image_block block-1 hd-image_block" width="100%" cellpadding="30"
+                        <td width="100%">
+                          <table width="100%"
                            >
                             <tr>
-                              <td class="pad" style="padding: 15px 15px 5px;">
-                                <div class="alignment hd-alignment" align="center">
+                              <td style="padding: 15px 15px 5px;">
+                                <div align="center">
                                   <div> <img src="https://www.aster.cat/images/carousel01-75.jpg" alt="imagen de aster"
-                                      class="hd-image" width="740"></div>
+                                       width="740"></div>
                                 </div>
                               </td>
                             </tr>
                           </table>
-                          <table class="paragraph_block block-2 hd-paragraph_block2" width="100%"
-                            cellpadding="10">
+                          <table width="100%">
                             <tr>
-                              <td class="pad">
+                              <td>
                                 <div class="hd-div-paragraph">
                                   <h2 class="hd-p-paragraph">AsterPublicació {id}</h2>
                                   <h3 class="hd-p-paragraph">{date}</h3>

@@ -3,11 +3,6 @@ import type { Newsletter } from '../services/interfaces/newsletter.d.ts'
 import {loadSpreadsheet} from '../services/sheets.js'
 import type { Reverse } from '../services/interfaces/newsletter.d.ts'
 
-export async function loadNewsletters() {
-  const data = await loadSpreadsheet() 
-  return {}
-}
-
 export async function getNewslettersAll() {
   const {data} = await loadSpreadsheet()
   return data
@@ -24,8 +19,7 @@ export async function getNewslettersLast() {
 
 export async function getNewsletters(page) {
   const {data} = await loadSpreadsheet()
-  const dataSelected = data.filter(item => item.id==page) 
-  console.log(dataSelected[0])  
+  const dataSelected = data.filter(item => item.id==page)  
   if (!dataSelected[0].widthPhoto[0]) dataSelected[0]['widthPhoto'] = 70
   return dataSelected[0]
 }
@@ -51,11 +45,11 @@ export function newsSortedGrouped (news) {
 export function calculeClasesReverse(news) {
 const reverse: Reverse =  (news.order%2 == 1 || news.widthPhoto == 0 || news.widthPhoto == 100) 
 ? {rever:'', 
-  first:'column column-2', 
-  last:'column column-2'}  
+  first:'', 
+  last:''}  
 : {rever:'reverse', 
-  first:'column column-2 first', 
-  last:'column column-2 last'} 
+  first:'first', 
+  last:'last'} 
 
     return reverse
 } 

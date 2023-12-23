@@ -54,11 +54,11 @@ export function newsSortedGrouped (news) {
 export function calculeClasesReverse(news) {
 const reverse: Reverse =  (news.order%2 == 1 || news.widthPhoto == 0 || news.widthPhoto == 100) 
 ? {rever:'', 
-  first:'column column-2 mn-column2-article', 
-  last:'column column-2 mn-column2-article'}  
+  first:'', 
+  last:''}  
 : {rever:'reverse', 
-  first:'column column-2 mn-column2-article first', 
-  last:'column column-2 mn-column2-article last'} 
+  first:'first', 
+  last:'last'} 
 
     return reverse
 } 

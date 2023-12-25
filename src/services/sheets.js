@@ -1,6 +1,6 @@
 import {sheet_to_obj} from './sheets-sheets-to-obj.js'
 import {bookObj_to_jsonStr} from './sheets-obj-to-str.js'
-import constants from '../json/constants.json' assert { type: "json" }
+import constants from '../config/constants.json' assert { type: "json" }
 
 export const loadSpreadsheet = async () => {
 

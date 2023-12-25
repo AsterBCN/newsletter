@@ -1,5 +1,3 @@
-import type { Newsletter } from '../services/interfaces/newsletter.d.ts'
-
 import {loadSpreadsheet} from '../services/sheets.js'
 import type { Reverse } from '../services/interfaces/newsletter.d.ts'
 

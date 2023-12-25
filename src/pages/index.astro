@@ -3,6 +3,7 @@ import Layout from '../layouts/Layout.astro';
 import Head from "../components/Head.astro";
 import Main1 from '../components/Main1.astro';
 import Footer from '../components/Footer.astro';
+import CallWeb from '../components/CallWeb.astro';
 import { getNewslettersLast,  } from '../services/getnewsletters'
 import Styles from '../components/Styles.astro';
 
@@ -11,6 +12,7 @@ const {id, sequence, date, widthPhoto, news } = await getNewslettersLast()
 ---
 
 <Layout>
+    <CallWeb />
     <Head id={id} date={date}/>
     <Main1 news={news} widthPhotoDefault={widthPhoto}/>
     <Footer/>

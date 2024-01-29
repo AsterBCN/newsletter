@@ -12,7 +12,7 @@ const {id, sequence, date, widthPhoto, news } = await getNewslettersLast()
 ---
 
 <Layout>
-    <CallWeb />
+    <CallWeb id={id} />
     <Head id={id} date={date}/>
     <Main1 news={news} widthPhotoDefault={widthPhoto}/>
     <Footer/>

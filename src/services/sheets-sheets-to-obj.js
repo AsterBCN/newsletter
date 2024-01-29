@@ -50,7 +50,18 @@ const getRowsList = async (googleSheets, sheetName ,spreadsheetId) => {
     spreadsheetId,
     range: `${sheetName.properties.title}!A:Z`, // Especifica el nombre o rango de la hoja que quieres leer
   });
-  const rows = sheet.data.values;
+  let rows = sheet.data.values;
+  
+  rows = rows.map(cells => {
+    const row = cells.map(cell => {
+      
+      if (cell.includes('"') &&  !cell.includes('\\"') || cell.includes(String.fromCharCode(10)) ) {
+         cell = '********** Caràcters incorrectes ************'
+      }
+      return cell
+    })
+    return row
+  })
   return rows
 }
 

@@ -14,7 +14,6 @@
     "dotenv": "^16.3.1",
     "google-auth-library": "^9.4.1",
     "google-spreadsheet": "^4.1.1",
-    "googleapis": "^129.0.0",
-    "puppeteer": "^21.6.0"
+    "googleapis": "^129.0.0"
   }
 }

@@ -1,6 +1,6 @@
 ---
 import type { News, Reverse } from '../services/interfaces/newsletter'
-import { getUrlImageDrive } from '../services/getImages.ts'
+//import { getUrlImageDrive } from '../services/getImages.ts'
 
 export interface Props {
   news: News
@@ -14,7 +14,7 @@ const isOneDrive = false   //url.includes('live.com')
 const isDrive = false      //url.includes('drive.google.com/file')
 
 if (isOneDrive) url = url.replace('?', '%3F' )
-if (isDrive) url = await getUrlImageDrive(url)
+//if (isDrive) url = await getUrlImageDrive(url)
 ---
 
 <!-- ARTICLE PHOTO -->

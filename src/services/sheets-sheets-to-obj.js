@@ -10,10 +10,10 @@ const CLIENT_EMAIL = import.meta.env.CLIENT_EMAIL;
  * @returns obj 
  */ 
 const authenticate = async (email, key) => {
-// Crear un cliente JWT (JSON Web Token) para la autenticación
-const client = new google.auth.JWT(email, null, key,  ['https://www.googleapis.com/auth/spreadsheets']);
-// Realizar la autenticación y ejecutar una operación en la hoja de cálculo
-let googleSheets = null
+  // Crear un cliente JWT (JSON Web Token) para la autenticación
+  const client = new google.auth.JWT(email, null, key,  ['https://www.googleapis.com/auth/spreadsheets']);
+  // Realizar la autenticación y ejecutar una operación en la hoja de cálculo
+  let googleSheets = null
   try {
     // Autenticar al cliente
     await client.authorize();

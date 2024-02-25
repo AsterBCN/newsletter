@@ -1,4 +1,5 @@
 ---
+import Parrafo from './Parrafo.astro';
 import type { News, Reverse } from '../services/interfaces/newsletter'
 
 export interface Props {
@@ -32,7 +33,8 @@ const {order,category, url, image, title, summary} = news
     <tr>
       <td class="mn-pad-title-p">
         <div class="mn-div-title-p">
-          <p class="mn-paragraph-article-p">{summary}
+          <p class="mn-paragraph-article-p">
+            <Parrafo text={summary}/>
           </p>
         </div>
       </td>

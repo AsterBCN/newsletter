@@ -1,0 +1,31 @@
+---
+
+export interface Props {
+  text: string
+}
+const { text } = Astro.props
+let lista = []
+const desglosar = (text) => {
+  const expresionRegular = /(.*?)<i>(.*?)<\/i>(.*)/gsm;
+  const resultados = expresionRegular.exec(text);
+  if (resultados !== null) {
+    lista = [...lista, resultados.splice(1, 2)]
+    desglosar(resultados[1])
+  } else {
+    lista = [...lista, [text]]
+  }  
+}
+
+desglosar(text)
+lista = lista.flat()
+---
+<p>
+  {
+    lista.map( (text, idx) => {
+      return (
+        
+        idx%2 == 0 ? <span> {text} </span> : <i> {text} </i>
+      )
+    })
+  }
+</p>

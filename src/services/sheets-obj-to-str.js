@@ -13,7 +13,7 @@ export const bookObj_to_jsonStr = (book) => {
       value.substring(0,1) == '[')                                  // Título que empieza nivel 2:   "[news]""
     const changePosition = valuesTitle.indexOf(changeLevel)         // Posición que empieza niv 2:   2  
     const numberRows = keys.reduce( (max, key) => 
-      key.substring(1) > max ? key.substring(1) : max, 0 )          // Número filas de la hoja
+      +key.substring(1,) > max ? +key.substring(1) : max, 0 )       // Número filas de la hoja
 
     //    ********  LEVEL 0  ****************
     // output es la salida del módulo y es el json generado en formato string

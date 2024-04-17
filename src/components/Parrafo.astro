@@ -18,13 +18,14 @@ const desglosar = (text) => {
 
 desglosar(text)
 lista = lista.flat()
+
 ---
 <p class="mn-paragraph-article-p">
   {
     lista.map( (text, idx) => {
       return (
         
-        idx%2 == 0 ? <span> {text} </span> : <i> {text} </i>
+        idx%2 == 0 ? <> {text} </> : <i> {text} </i>
       )
     })
   }

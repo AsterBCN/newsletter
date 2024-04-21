@@ -55,9 +55,12 @@ const getRowsList = async (googleSheets, sheetName ,spreadsheetId) => {
   rows = rows.map(cells => {
     const row = cells.map(cell => {
       
-      if (cell.includes('"') &&  !cell.includes('\\"') || cell.includes(String.fromCharCode(10)) ) {
-         cell = '********** Caràcters incorrectes ************'
-      }
+      const regex = /\\{2}|\\"|\\n/g;
+      const cellModified = cell.replace(regex, '');
+
+      if (cellModified.includes('"') || cellModified.includes('\\') || cellModified.includes(String.fromCharCode(10)) ) {
+        cell = '********** Caràcters incorrectes ************'
+      }      
       return cell
     })
     return row

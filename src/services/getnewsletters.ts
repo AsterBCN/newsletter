@@ -1,5 +1,5 @@
-import {loadSpreadsheet} from '../services/sheets.js'
-import type { Reverse } from '../services/interfaces/newsletter.d.ts'
+import {loadSpreadsheet} from './sheets.js'
+import type { Reverse } from './interfaces/newsletter.js'
 
 export async function loadNewsletters() {
   const data = await loadSpreadsheet() 

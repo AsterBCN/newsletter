@@ -12,7 +12,7 @@ export async function getNewslettersAll() {
 }
 export async function getNewslettersLast() {
   const {data} = await loadSpreadsheet()
-  const dataSelected = data.reduce((previous, current) => {
+  const dataSelected = data.reduce((previous:any, current:any) => {
     return current.id > previous.id ? current : previous;
   });
 
@@ -20,21 +20,21 @@ export async function getNewslettersLast() {
   return dataSelected
 }
 
-export async function getNewsletters(page) {
+export async function getNewsletters(page:any) {
   const {data} = await loadSpreadsheet()
-  const dataSelected = data.filter(item => item.id==page)  
+  const dataSelected = data.filter((item: { id: any }) => item.id==page)  
   if (!dataSelected[0].widthPhoto[0]) dataSelected[0]['widthPhoto'] = 70
   return dataSelected[0]
 }
 
 
 
-export function newsSortedGrouped (news) {
-  const newsSorted = news.slice().sort(function(a, b) {
+export function newsSortedGrouped (news:any) {
+  const newsSorted = news.slice().sort(function(a:any, b:any) {
     return a.order - b.order;
   })
  
-  const newsGruopedBy = newsSorted.reduce(function (acc, obj) {
+  const newsGruopedBy = newsSorted.reduce(function (acc:any, obj:any) {
     const keyValue = obj['category'];
     if (!acc[keyValue]) {
       acc[keyValue] = [];
@@ -45,7 +45,7 @@ export function newsSortedGrouped (news) {
   return newsGruopedBy
 }
 
-export function calculeClasesReverse(news) {
+export function calculeClasesReverse(news:any) {
 const reverse: Reverse =  (news.order%2 == 1 || news.widthPhoto == 0 || news.widthPhoto == 100) 
 ? {rever:'', 
   first:'column column-2', 

@@ -11,6 +11,7 @@ export async function getNewslettersAll() {
   return data
 }
 export async function getNewslettersLast() {
+  'use server'
   const {data} = await loadSpreadsheet()
   const dataSelected = data.reduce((previous:any, current:any) => {
     return current.id > previous.id ? current : previous;

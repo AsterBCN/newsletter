@@ -11,12 +11,6 @@ import { getItem } from '../services/getDynamics'
 
 // const {id, sequence, date, widthPhoto, news } = await getNewslettersLast()
 
-
-
-
-const {id, date, widthPhoto, news } = await getItem()
-
-
 export default async function HomePage() {
   
   const {id, date, widthPhoto, news } = await getItem()

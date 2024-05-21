@@ -22,7 +22,7 @@ export const Head = ({ id, date }: Props) => {
                               <tr>
                                 <td style={{padding: '15px 15px 5px'}}>
                                   <div>
-                                    <Image src="https://www.aster.cat/images/newsletter.jpg"  
+                                    <img src="https://www.aster.cat/images/newsletter.jpg"  
                                       alt="imagen de aster" width={768} height={249} />
                                   </div>
                                 </td>

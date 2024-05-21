@@ -28,7 +28,7 @@ export default function RootLayout({
       <body>
         <table align="center" width="800px">
           <tbody>
-            <tr>
+            <tr> 
               <td>
                {children}
               </td>

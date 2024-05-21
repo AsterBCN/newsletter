@@ -23,6 +23,7 @@ export default function RootLayout({
         <meta charSet="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>ASTER - Agrupació Astronòmica de Barcelona - Newsletter</title>
+        <link href="/globals.css" rel="stylesheet" type="text/css"></link>
       </head>
       <body>
         <table align="center" width="800px">

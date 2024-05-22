@@ -23,8 +23,8 @@ export const Parrafo = ({ text }: Props) => {
       <p className="mn-paragraph-article-p">
         {lista.map((text, idx) => {
           return idx % 2 == 0 
-            ? (<span key={idx} style={{ whiteSpace: "pre-line" }}> {" "} {text}{" "} </span>) 
-            : (<i key={idx} style={{ whiteSpace: "normal" }}> {" "} {text}{" "} </i>);
+            ? (<span key={idx} style={{ whiteSpace: "pre-line" }}> {""} {text}{""} </span>) 
+            : (<i key={idx} style={{ whiteSpace: "normal" }}> {""} {text}{""} </i>);
         })}
       </p>
     </>

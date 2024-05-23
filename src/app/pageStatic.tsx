@@ -4,10 +4,8 @@ import {Head} from '../components/Head';
 import {Main1} from '../components/Main1';
 import {Footer} from '../components/Footer';
 
-//const {id, sequence, date, widthPhoto, news } = await getNewslettersLast()
-
 export default async function HomePage() {
-  console.log('Main Page')
+
   const {id, date, widthPhoto, news } = await getNewslettersLast()
   return (
     <>    

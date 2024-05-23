@@ -55,5 +55,5 @@ const reverse: Reverse =  (news.order%2 == 1 || news.widthPhoto == 0 || news.wid
   first:'column column-2 first', 
   last:'column column-2 last'} 
 
-    return reverse
+return reverse
 } 

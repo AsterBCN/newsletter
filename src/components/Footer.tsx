@@ -64,7 +64,8 @@ export const Footer = () => {
 														<div className="ft2-div-p">
 															<p className="ft2-pad">Aster, Agrupació Astronòmica de Barcelona, declarada Entitat
 																	d'utilitat pública segons resolució del Departament de Justícia de la Generalitat de
-																	Catalunya, número JUS/3230/2009 del 12/11/2009</p>
+																	Catalunya, número JUS/3230/2009 del 12/11/2009
+															</p>
 														</div>
 													</div>
 												</td>

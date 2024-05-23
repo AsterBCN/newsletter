@@ -4,8 +4,6 @@ interface Props {
 }
 
 export const Category = ({category}: Props) => {
-
-
   return (
        
     <table align="center" width="100%">

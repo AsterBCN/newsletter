@@ -22,10 +22,9 @@ export const Main3 = ({news, widthPhotoDefault}: Props) => {
             <table className="row-content stack mn-row-content-article" align="center" width="800" >
               <tbody>
                 <tr className={reverse.rever}>
-                    {   reverse.rever == 'reverse'
-                        ? <><Main3Left news={news} reverse={reverse} widthPhoto={news.widthPhoto} /><Main3Right news={news} reverse={reverse} widthPhoto={news.widthPhoto} /></>
-                        :  
-                        <><Main3Right news={news} reverse={reverse} widthPhoto={100 - news.widthPhoto} /><Main3Left news={news} reverse={reverse} widthPhoto={100 - news.widthPhoto} /></>
+                    { reverse.rever == 'reverse'
+                      ? <><Main3Left news={news} reverse={reverse} widthPhoto={news.widthPhoto} /><Main3Right news={news} reverse={reverse} widthPhoto={news.widthPhoto} /></>
+                      : <><Main3Right news={news} reverse={reverse} widthPhoto={100 - news.widthPhoto} /><Main3Left news={news} reverse={reverse} widthPhoto={100 - news.widthPhoto} /></>
                     }              
                 </tr>
               </tbody>

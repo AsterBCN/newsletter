@@ -21,5 +21,5 @@ export const Main2 = ({news, widthPhotoDefault}: Props) => {
         })  
       }
     </>
-)
+  )
 }

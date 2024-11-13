@@ -3,7 +3,6 @@
 
 import React, { useState } from 'react';
 import { Head } from '../../components/Head';
-import { Footer } from '../../components/Footer';
 
 
 export default function Cleaner() {
@@ -54,8 +53,8 @@ export default function Cleaner() {
                                 <textarea
                                   value={text}
                                   onChange={(e) => setText(e.target.value)}
-                                  placeholder="Introduce el texto aquí..."
-                                  cols="80"
+                                  placeholder="Enganxa el codi font HTML aquí..."
+                                  cols={80}
                                   rows={8}
                                   style={{ width: '100%', marginBottom: '10px', overflow:'hidden'}}
                                 />

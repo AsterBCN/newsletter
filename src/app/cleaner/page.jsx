@@ -15,7 +15,7 @@ export default function Cleaner() {
     if (text) {
 
       // Regex para eliminar contenido entre '<!.. -->'
-      let text_ = text.replace(/\<\!-- --\>/g, '');
+      let text_ = text.replace(/\<\!-- --\>\n?/g, '');
       text_ = text_.replace(/\<script\>[\s\S]*?\<\/script\>/g, '');
       const cleanedText = text_.replace(/\<script src=[\s\S]*?\<\/script\>/g, '');
     

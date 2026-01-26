@@ -167,7 +167,7 @@ export const Footer = () => {
 																	Avinguda Tibidabo, 15<br /> 
 																	08022 BARCELONA  <br /> <br /> 
 																	Si ja no vols rebre correus d'Aster, <br /> 
-																	<a href="https://emails.aster.cat/unsubscribe/0zo0/form?from_groups=true&token=pix3x12s">pots donat-te de baixa aquí
+																	<a href={"{{%20unsubscribe_url%20}}"}>pots donat-te de baixa aquí
 																	</a><br />
 																</p>
 															</div>
